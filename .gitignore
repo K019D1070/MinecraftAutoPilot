@@ -1,2 +1,7 @@
 #node binary
 node/*
+#依存パッケージ群
+/node_modules
+#いらん
+.vscode
+workspace.code-workspace

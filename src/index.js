@@ -7,7 +7,7 @@ main();
 async function main(){
   const rcon = await Rcon.Rcon.connect({
     host:"127.0.0.1",
-    port:25576,
+    port:25575,
     password:"TDNTNOK111"
   }).catch((err)=>{
     console.error(err);
