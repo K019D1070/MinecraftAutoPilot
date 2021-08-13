@@ -7,7 +7,8 @@ rcon-client使ってサーバー止めて止まったのを確認してから終
 start.batなりstart.shにstop.statusを出させるようにしとかないとサーバーが落ちたことを検出できない
 
 うちの環境の例
-```bat:!start.bat
+```bat
+rem !start.bat
 
 @echo OFF
 echo %date% %time%
@@ -20,7 +21,8 @@ echo stopped> stop.status
 exit
 ```
 runningステータスは特に必要ない
-```bat:!maintenance.bat
+```bat
+rem !maintenance.bat
 @echo OFF
 cd /d %~dp0
 set PATH=%PATH%;D:\data\script\nodeJS\autoPilot\node
@@ -35,7 +37,8 @@ start /min !backup.bat every
 exit
 ```
 このスクリプトの`node "D:\data\script\nodeJS\autoPilot\src\index.js" >> ./logs\backup.log`のとこでこのプロジェクトを使ってます
-```bat:!backup.bat
+```bat
+rem !backup.bat
 @echo OFF
 cd /d %~dp0
 title Minecraft Auto Backup
