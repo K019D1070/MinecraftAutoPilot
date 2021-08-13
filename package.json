@@ -1,0 +1,24 @@
+{
+  "name": "minecraft-auto-pilot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "launch": "run-script-os",
+    "launch:win32": ".\\node\\node .\\src\\index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com.k019d1070:K019D1070/MinecraftAutoPilot.git"
+  },
+  "author": "K019D1070",
+  "license": "ISC",
+  "devDependencies": {
+    "run-script-os": "^1.1.6"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "rcon-client": "^4.2.3"
+  }
+}
