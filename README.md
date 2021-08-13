@@ -1,13 +1,13 @@
 # Minecraft auto pilot
 
 ## 概要 / about
-rcon-client使ってサーバー止めて止まったのを確認してから終了するようになってだけ
+rcon-client使ってサーバー止めて止まったのを確認してから終了するようになってるだけ
 
 ## 使い方 / instructions
 start.batなりstart.shにstop.statusを出させるようにしとかないとサーバーが落ちたことを検出できない
 
 うちの環境の例
-```rem !start.bat
+```bat:!start.bat
 
 @echo OFF
 echo %date% %time%
@@ -20,7 +20,7 @@ echo stopped> stop.status
 exit
 ```
 runningステータスは特に必要ない
-```rem !maintenance.bat
+```bat:!maintenance.bat
 @echo OFF
 cd /d %~dp0
 set PATH=%PATH%;D:\data\script\nodeJS\autoPilot\node
@@ -35,7 +35,7 @@ start /min !backup.bat every
 exit
 ```
 このスクリプトの`node "D:\data\script\nodeJS\autoPilot\src\index.js" >> ./logs\backup.log`のとこでこのプロジェクトを使ってます
-```!backup.bat
+```bat:!backup.bat
 @echo OFF
 cd /d %~dp0
 title Minecraft Auto Backup
@@ -51,6 +51,6 @@ exit
 ```
 
 ## 余談
-linuxだったらGNU screen上でMinecraftサーバーを立てて管理の自動化をするんだろうけどWindowsだと近いソリューションがないのでこのようなものを作った
+linux系OSだったらGNU screen上でMinecraftサーバーを立てて管理の自動化をするんだろうけどWindowsだと近いソリューションがないのでこのようなものを作った
 
 サーバーを止めるプラグインを使うより何やってるか把握しやすいのでNode.jsで書いた(Javaが書けたらプラグイン作ってたかも)
