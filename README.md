@@ -46,7 +46,7 @@ rem .ignoreにあるファイル･フォルダを除外してtmp以下にコピ
 xcopy /Y /C /D /E /exclude:.ignore * D:\tmp\mc_kamata >> ./logs\backup.log
 rem 取り敢えずファイルはコピーしたのでサーバー起動
 if "%~1"=="every" (
-  start !start.bat
+  start /I /high !start.bat
 )
 rem コピーしたやつを圧縮
 7z a -bt -md=1536m -mfb=273 -mmt=16 -mx=9 -snh -snl -slp -sse -mqs=on -sdel ".\back\%date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%_autosave.7z" "D:\tmp\mc_kamata\*" >> ./logs\backup.log
